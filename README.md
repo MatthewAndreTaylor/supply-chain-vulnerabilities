@@ -1,0 +1,142 @@
+# Supply Chain Vulnerabilities
+
+<img alt='Python' src='https://img.shields.io/badge/Python-100000?style=flat&logo=Python&logoColor=FFFFFF&labelColor=black&color=black'/>
+
+
+The goal of this lab is to detect and respond to supply chain vulnerabilities in software.
+In this lab we will primarily be using Python, but similar concepts apply across other supply chains.
+
+Learning goals
+
+- Search and find vulnerabilities in example packages.
+- Update packages and write commands to safely download packages
+- Create a lock file [uv.lock](https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile)
+- Use automated tools to detect vulnerabilities ahead of releases
+
+
+The vunerability put into each package is that it installs another package named `mattyt`. Similar to a russian nesting doll. 🎎
+
+As good actors we encourage you to look at the package that will be installed in the examples. https://pypi.org/project/mattyt/
+The source code is here https://github.com/MatthewAndreTaylor/CSC427-mpackage-example (Only contains a README.md)
+
+Fill out `notes.txt` for each written task.
+
+
+# Prerequisites
+
+- Install [Python >= 3.11](https://www.python.org/downloads/)
+- Install [uv](https://github.com/astral-sh/uv)
+- Install [GuardDog](https://github.com/DataDog/guarddog)
+
+
+# Tasks
+
+
+## Task 1
+
+- Take a look through the `awesome_mathutils` package
+
+- Run `pip install ./awesome_mathutils` 
+
+This will build and install `awesome_mathutils`, but also secretly installs `mattyt`. You can verify this with the following
+
+```sh
+pip show mattyt
+```
+
+If it was installed you will see something similar 
+
+```
+Name: mattyt
+Version: 69.69.69
+Location: C:\Users\...\site-packages
+```
+
+
+### Task 1.1 awesome_mathutils - detection
+
+Matthew the maintainer has accidentally approved a pull request which secretly installs the package `mattyt` in two places.
+
+
+(a) Write out the function call which is executed to install the `mattyt` package for source distributions
+
+(b) Write out the function call which is executed to install the `mattyt` package for binary distributions
+
+hint: 🐶
+
+
+### Task 1.2 awesome_mathutils - remediation
+
+(a) Update setup.py removing any unsafe code
+
+(b) Create a pyproject.toml removing dynamic dependencies
+
+(c) Include only the dog image properly see: (https://setuptools.pypa.io/en/latest/userguide/datafiles.html#package-data)
+
+(d) Bump the version by one patch see: (https://semver.org/) and add yourself as an author.
+
+Build the wheel file save this it is what you will upload.
+
+`python ./awesome_mathutils/setup.py sdist`
+
+
+## Task 2
+
+- Take a look through the `awesome_requests` package
+
+- Run `pip install ./awesome_requests`
+
+This will build and install `awesome_requests`, but also install the `mattyt` package from PyPI
+
+
+### Task 2.1 - package source
+
+hint: [finding pip packages](https://pip.pypa.io/en/stable/cli/pip_install/#finding-packages)
+
+(a) Write a command with `pip` to install `requests` specifically from github `https://github.com/psf/requests` 
+
+(b) Write a command with `pip` to install `requests` from github `https://github.com/psf/requests` falls back onto PyPI `https://pypi.org/simple`.
+
+(c) Write a command with `pip` to install `awesome_requests` without package dependencies.
+
+
+### Task 2.2 - lock file
+
+
+(a) Add secure versions to the dependencies used in the package, remove any potentially vunerable build requirements.
+
+(b) Update the dependency `requests` to use github `https://github.com/psf/requests` as the source. Assume PyPI has been corrupted use the tagged commit from the following release `https://github.com/psf/requests/releases/tag/v2.32.4`
+
+(c) Update the dependency `mattyt` to use the safe local version.
+
+(d) Bump the version by one patch see: (https://semver.org/) and add yourself as an author.
+
+(e) Create a `uv.lock` file. see: (https://docs.astral.sh/uv/guides/projects/#uvlock)
+
+
+
+## Task 3
+
+This section will have you go through an example of security auditing packages using tools.
+
+
+### Task 3.1 - tools
+
+(a) Run the following commands paste the output in `notes.txt`
+
+
+```sh
+# Scan the most recent version of the 'requests' package
+guarddog pypi scan requests
+
+# Scan a specific version of the 'requests' package
+guarddog pypi scan requests --version 2.28.1
+
+# Scan javascript npm packages
+guarddog npm scan lodash
+```
+
+(b) List 3 example auditing tools which check for possible vunerabilities.
+
+
+

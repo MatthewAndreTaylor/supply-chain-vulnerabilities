@@ -1,0 +1,5 @@
+[project]
+name = "mattyt"
+version = "0.0.1"
+description = "This is a lesson of how python packages can get installed. This is the 'safe' local version you want!"
+readme = "README.md"
