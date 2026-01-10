@@ -23,6 +23,16 @@ The source code is here https://github.com/MatthewAndreTaylor/CSC427-mpackage-ex
 Fill out `notes.txt` for each written task.
 
 
+
+# Submission
+
+A completed `notes.txt`
+
+The updated `awesome_mathutils` source package `awesome_mathutils-{version}.tar.gz`
+
+The `awesome_requests/pyproject.toml` and `awesome_requests/uv.lock`
+
+
 # Prerequisites
 
 - Install [Python >= 3.11](https://www.python.org/downloads/)
@@ -114,6 +124,14 @@ hint: [finding pip packages](https://pip.pypa.io/en/stable/cli/pip_install/#find
 
 (e) Create a `uv.lock` file. see: (https://docs.astral.sh/uv/guides/projects/#uvlock)
 
+(f) Install `uv-secure` is a tool that checks for known vulnerabilities listed against those packages and versions in the PyPi json API.
+
+```
+uv tool install uv-secure
+uv-secure
+```
+
+paste the output into `notes.txt`
 
 
 ## Task 3
@@ -137,7 +155,7 @@ guarddog pypi scan requests --version 2.28.1
 guarddog npm scan lodash
 ```
 
-(b) List 3 example auditing tools which check for possible vunerabilities.
+(b) List 3 addtional example auditing tools which check for possible supply chain vunerabilities.
 
 
 
