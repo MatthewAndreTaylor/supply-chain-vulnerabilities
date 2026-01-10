@@ -69,11 +69,11 @@ hint: 🐶
 
 (a) Update setup.py removing any unsafe code
 
-(b) Create a pyproject.toml removing dynamic dependencies
+(b) Create a pyproject.toml removing dynamic dependencies, add setuptools as the build backend. (https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)
 
-(c) Include only the dog image properly see: (https://setuptools.pypa.io/en/latest/userguide/datafiles.html#package-data)
+(c) Include only the dog image properly. (https://setuptools.pypa.io/en/latest/userguide/datafiles.html#package-data)
 
-(d) Bump the version by one patch see: (https://semver.org/) and add yourself as an author.
+(d) Bump the version by one patch (https://semver.org/) and add yourself as an author.
 
 Build the wheel file save this it is what you will upload.
 
