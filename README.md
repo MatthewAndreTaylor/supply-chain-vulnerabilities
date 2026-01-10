@@ -64,7 +64,7 @@ Location: C:\Users\...\site-packages
 ```
 
 
-### Task 1.1 awesome_mathutils - detection
+### Task 1.1 - detection
 
 Matthew the maintainer has accidentally approved a pull request which secretly installs the package `mattyt` in two places.
 
@@ -76,7 +76,7 @@ Matthew the maintainer has accidentally approved a pull request which secretly i
 hint: 🐶
 
 
-### Task 1.2 awesome_mathutils - remediation
+### Task 1.2 - remediation
 
 (a) Update setup.py removing any unsafe code
 
