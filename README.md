@@ -17,7 +17,8 @@ Learning goals
 The vunerability put into each package is that it installs another package named `mattyt`. Similar to a russian nesting doll. 🎎
 
 As good actors we encourage you to look at the package that will be installed in the examples. https://pypi.org/project/mattyt/
-The source code is here https://github.com/MatthewAndreTaylor/CSC427-mpackage-example (Only contains a README.md)
+
+The source code is here https://github.com/MatthewAndreTaylor/CSC427-mpackage-example (Only contains a `README.md`)
 
 Fill out `notes.txt` for each written task.
 
