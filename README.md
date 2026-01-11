@@ -116,7 +116,7 @@ hint: [finding pip packages](https://pip.pypa.io/en/stable/cli/pip_install/#find
 
 (a) Add secure versions to the dependencies used in the package, remove any potentially vunerable build requirements.
 
-(b) Update the dependency `requests` to use github `https://github.com/psf/requests` as the source. Assume PyPI has been corrupted use the tagged commit from the following release `https://github.com/psf/requests/releases/tag/v2.32.4`
+(b) Update the dependency `requests` to use github `https://github.com/psf/requests` as the source. Assume PyPI has been corrupted, use the tagged commit from the following release `https://github.com/psf/requests/releases/tag/v2.32.4`
 
 (c) Update the dependency `mattyt` to use the safe local version.
 
