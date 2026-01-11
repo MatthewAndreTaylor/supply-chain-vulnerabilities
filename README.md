@@ -141,7 +141,7 @@ This section will have you go through an example of security auditing packages u
 
 ### Task 3.1 - tools
 
-(a) List 3 addtional example auditing tools which check for possible supply chain vunerabilities. Write an example command for each.
+(a) List 4 addtional example auditing tools which check for possible supply chain vunerabilities. Write an example command for each.
 
 
 
