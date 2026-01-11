@@ -36,11 +36,6 @@ Task 3.1
 
 (a)
 
-# Your answer here
-
-
-(b)
-
 - tool 0:
 
 - tool 1: 

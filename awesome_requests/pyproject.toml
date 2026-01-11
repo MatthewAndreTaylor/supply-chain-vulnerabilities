@@ -13,15 +13,5 @@ dependencies = [ "mattyt", "flask", "requests" ]
 # Override the default source for flask with main git branch
 flask = { git = "https://github.com/pallets/flask", rev = "2c1b30d0503cfb064f1cb252e6614a06915a362a" }
 
-[tool.uv.workspace]
-members = [
-    "example",
-]
-
 # hint: https://docs.astral.sh/uv/concepts/projects/dependencies/#dependency-sources
 
-
-
-[build-system]
-requires = ["uv_build >= 0.9.21, <0.10.0"]
-build-backend = "uv_build"

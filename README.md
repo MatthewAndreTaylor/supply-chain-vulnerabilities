@@ -141,21 +141,7 @@ This section will have you go through an example of security auditing packages u
 
 ### Task 3.1 - tools
 
-(a) Run the following commands paste the output in `notes.txt`
-
-
-```sh
-# Scan the most recent version of the 'requests' package
-guarddog pypi scan requests
-
-# Scan a specific version of the 'requests' package
-guarddog pypi scan requests --version 2.28.1
-
-# Scan javascript npm packages
-guarddog npm scan lodash
-```
-
-(b) List 3 addtional example auditing tools which check for possible supply chain vunerabilities.
+(a) List 3 addtional example auditing tools which check for possible supply chain vunerabilities. Write an example command for each.
 
 
 
