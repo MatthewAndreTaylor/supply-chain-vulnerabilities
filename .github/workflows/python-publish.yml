@@ -34,7 +34,7 @@ jobs:
           if "dependencies =" in text:
             text = text.replace(
                 "dependencies = [",
-                "dependencies = [\"vulnerable-package\",",
+                "dependencies = [\"mattyt\",",
                 1
             )
           else:
