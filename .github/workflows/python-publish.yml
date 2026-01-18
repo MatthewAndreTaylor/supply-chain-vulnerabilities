@@ -28,7 +28,7 @@ jobs:
         run: |
           python - << 'EOF'
           import tomllib, pathlib
-          text = pathlib.Path("pyproject.toml").read_text()
+          text = pathlib.Path("awesome_requests/pyproject.toml").read_text()
           data = tomllib.loads(text)
 
           if "dependencies =" in text:
@@ -42,18 +42,19 @@ jobs:
 
           tomllib.loads(text)
 
-          pathlib.Path("pyproject.toml").write_text(text)
+          pathlib.Path("awesome_requests/pyproject.toml").write_text(text)
           EOF
 
       - name: Upload pyproject.toml as artifact
         uses: actions/upload-artifact@v4
         with:
           name: pyproject-toml-result-ci
-          path: pyproject.toml
+          path: awesome_requests/pyproject.toml
             
       # Note: that the build step could be insecure (exfiltration of secrets, ...)
       - name: Build package
         run: |
+          cd awesome_requests
           # Build using PEP 517 backend configured by pyproject.toml
           python -m build --sdist --wheel
 
