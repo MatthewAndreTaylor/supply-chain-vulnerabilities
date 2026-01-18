@@ -144,4 +144,11 @@ This section will have you go through an example of security auditing packages u
 (a) List 4 addtional example auditing tools which check for possible supply chain vunerabilities. Write an example command for each.
 
 
+### Task 3.2 - ci
 
+(a) Look through the workflow `.github\workflows\python-publish.yml` find out where this shared code is run. 
+
+Paste a link to the pyproject.toml artifact produced by the job. Might it be useful to scan through the other artifacts of the build before publishing?
+
+
+(b) Write the name of the step in the workflow that adds a dependency to `awesome_requests` when making a release.
