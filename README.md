@@ -13,7 +13,7 @@ Learning goals
 - Create and understand the purpose of a lockfile [uv.lock](https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile) for protecting supply chain security.
 - Understand how automated tools detect vulnerabilities ahead of releases.
 
-**By learning how to audit, look for vulnerabilities and use secure installs yourself the hope is that you will understand how tools that protect supply chain security work**
+**Learning how to audit, identify vulnerabilities, and perform secure installations will teach you how the automated tools that use the same principles to protect supply chain security work.**
 
 The vunerability put into each package is that it installs another package named `mattyt`. Similar to a russian nesting doll. 🎎
 
