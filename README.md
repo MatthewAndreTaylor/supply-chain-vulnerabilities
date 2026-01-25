@@ -150,7 +150,7 @@ Along with the command also write how the tool works: (checks vulnerable version
 
 (a) Look through the workflow `.github\workflows\python-publish.yml` find out where this shared code is run. 
 
-Paste a link to the pyproject.toml artifact produced by the job. Might it be useful to scan through the other artifacts of the build before publishing?
+Paste a link to the pyproject.toml artifact produced by the job. Write why it might be useful to scan through the other artifacts of the build before publishing?
 
 
 (b) Write the name of the step in the workflow that adds a dependency to `awesome_requests` when making a release.
