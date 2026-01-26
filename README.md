@@ -1,7 +1,7 @@
 # Supply Chain Vulnerabilities
 
+[![Github](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/MatthewAndreTaylor/supply-chain-vulnerabilities)
 <img alt='Python' src='https://img.shields.io/badge/Python-100000?style=flat&logo=Python&logoColor=FFFFFF&labelColor=black&color=black'/>
-
 
 The goal of this lab is to detect and respond to software supply chain vulnerabilities.
 In this lab we will primarily be using Python, but similar concepts apply across other supply chains.

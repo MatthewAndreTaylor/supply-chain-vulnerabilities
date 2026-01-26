@@ -1,9 +1,0 @@
-[project]
-name = "mattsbackend"
-version = "0.1.1"
-description = "A custom build backend example"
-
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "build"
-backend-path = ["mattsbackend"]
