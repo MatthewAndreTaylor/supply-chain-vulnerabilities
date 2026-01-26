@@ -8,11 +8,12 @@ In this lab we will primarily be using Python, but similar concepts apply across
 
 Learning goals
 
-- Search and find vulnerabilities in example packages.
-- Update packages and write commands to safely download packages
-- Create a lock file [uv.lock](https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile)
-- Use automated tools to detect vulnerabilities ahead of releases
+- Understand how search and find vulnerabilities in example packages.
+- Update packages and write commands to safely download packages.
+- Create and understand the purpose of a lockfile [uv.lock](https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile) for protecting supply chain security.
+- Understand how automated tools detect vulnerabilities ahead of releases.
 
+**Learning how to audit, identify vulnerabilities, and perform secure installations will teach you how the automated tools that use the same principles to protect supply chain security work.**
 
 The vunerability put into each package is that it installs another package named `mattyt`. Similar to a russian nesting doll. 🎎
 
@@ -37,8 +38,6 @@ The `awesome_requests/pyproject.toml` and `awesome_requests/uv.lock`
 
 - Install [Python >= 3.11](https://www.python.org/downloads/)
 - Install [uv](https://github.com/astral-sh/uv)
-- Install [GuardDog](https://github.com/DataDog/guarddog)
-
 
 # Tasks
 
@@ -111,8 +110,9 @@ hint: [finding pip packages](https://pip.pypa.io/en/stable/cli/pip_install/#find
 (c) Write a command with `pip` to install `awesome_requests` without package dependencies.
 
 
-### Task 2.2 - lock file
+### Task 2.2 - lockfile
 
+With `uv`, hashes are first-class, not optional. `uv` treats the lockfile as a cryptographic manifest. Protecting against manipulated package downloads and mirror repositories.
 
 (a) Add secure versions to the dependencies used in the package, remove any potentially vunerable build requirements.
 
@@ -141,14 +141,16 @@ This section will have you go through an example of security auditing packages u
 
 ### Task 3.1 - tools
 
-(a) List 4 addtional example auditing tools which check for possible supply chain vunerabilities. Write an example command for each.
+(a) List 4 addtional example auditing tools which check for possible supply chain vulnerabilities. Write an example command for each.
+
+Along with the command also write how the tool works: (checks vulnerable versions against a database, static analysis of code, hash/signature verification, monitors build pipeline, continuous runtime correlation, etc.)
 
 
 ### Task 3.2 - ci
 
 (a) Look through the workflow `.github\workflows\python-publish.yml` find out where this shared code is run. 
 
-Paste a link to the pyproject.toml artifact produced by the job. Might it be useful to scan through the other artifacts of the build before publishing?
+Paste a link to the pyproject.toml artifact produced by the job. Write why it might be useful to scan through the other artifacts of the build before publishing?
 
 
 (b) Write the name of the step in the workflow that adds a dependency to `awesome_requests` when making a release.
