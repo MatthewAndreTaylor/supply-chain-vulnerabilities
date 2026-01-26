@@ -26,9 +26,9 @@ jobs:
             
       - name: Build package
         run: |
-          cd slide_examples/demo/
+          cd slide_examples/demo/bootstrap/
           # Build using PEP 517 backend configured by pyproject.toml
-          python -m build bootstrap/
+          python -m build
 
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
