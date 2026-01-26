@@ -7,6 +7,8 @@ from setuptools.build_meta import get_requires_for_build_sdist
 from setuptools.build_meta import prepare_metadata_for_build_wheel
 
 def build_wheel(wheel_directory, config_settings=None, metadata_directory=None):
+    # Removed the special message from Matthew (there should be no matthew.py file created)
+    
     print("Matthews Custom build_wheel called")
     return _build_wheel(wheel_directory, config_settings, metadata_directory)
 
