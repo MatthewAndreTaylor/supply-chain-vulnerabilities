@@ -18,4 +18,4 @@ python -m build v0/
 
 # now lets unzip the built package and inspect the build.py file
 
-unzip v0/dist/mattsbackend-0.0.1-py3-none-any.whl -d unpacked_mattsbackend
+unzip v0/dist/mattsbackend-1.0.1-py3-none-any.whl -d unpacked_mattsbackend
