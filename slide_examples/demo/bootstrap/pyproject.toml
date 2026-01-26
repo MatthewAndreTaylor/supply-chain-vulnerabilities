@@ -1,6 +1,6 @@
 [project]
 name = "mattsbackend"
-version = "0.0.0"
+version = "1.0.0"
 description = "A custom build backend example"
 
 [build-system]
