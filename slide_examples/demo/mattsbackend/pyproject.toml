@@ -1,0 +1,11 @@
+[project]
+name = "mattsbackend"
+version = "0.1.0"
+
+# This is sometimes call self-hosting in Python it is called in-tree build backend
+# https://peps.python.org/pep-0517/#in-tree-build-backends
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "build"
+backend-path = ["mattsbackend"]

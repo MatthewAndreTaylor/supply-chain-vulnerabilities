@@ -1,0 +1,7 @@
+[project]
+name = "example_package"
+version = "0.0.1"
+
+[build-system]
+requires = ["setuptools", "mattsbackend @ file://../mattsbackend"] # local, could be moved to PyPI
+build-backend = "mattsbackend.build"
