@@ -143,7 +143,7 @@ This section will have you go through an example of security auditing packages u
 
 (a) List 4 addtional example auditing tools which check for possible supply chain vulnerabilities. Write an example command for each.
 
-Along with the command also write how the tool works: (checks vulnerable versions against a database, static analysis of code, hash/signature verification, monitors build pipeline, continuous runtime correlation, etc.)
+Along with the command also write how the tool works: (checks vulnerable versions against a database, static analysis of code, hash/signature verification, monitors build pipeline, continuous runtime monitoring, etc.)
 
 
 ### Task 3.2 - ci
