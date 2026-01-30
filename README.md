@@ -1,4 +1,4 @@
-# Supply Chain Vulnerabilities
+# Software Supply Chain Security
 
 [![Github](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/MatthewAndreTaylor/supply-chain-vulnerabilities)
 [![Python](https://img.shields.io/badge/Python-100000?style=flat&logo=Python&logoColor=FFFFFF&labelColor=black&color=black)](https://www.python.org/downloads/)
