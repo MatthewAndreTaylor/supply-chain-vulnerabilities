@@ -111,7 +111,7 @@ Build the wheel file and save it. You will upload this with your submission.
 ---
 
 
-## Task 2
+## Task 2 (Bonus)
 
 This section ensures you understand the importance of reproducable builds for supply chains.
 
