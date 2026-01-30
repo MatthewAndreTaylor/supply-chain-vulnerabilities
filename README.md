@@ -60,9 +60,9 @@ The `awesome_requests/pyproject.toml` and `awesome_requests/uv.lock`
 
 - This section teaches you how to respond to supply chain threats.
 
-- Take a look through the `awesome_mathutils` package
+- Take a look through the `awesome_mathutils` package `cd awesome_mathutils`
 
-- Run `pip install ./awesome_mathutils` 
+- Run `pip install .` 
 
 This will build and install `awesome_mathutils`, but also secretly installs `mattyt`. You can verify this with the following
 
@@ -106,7 +106,7 @@ hint: 🐶
 
 Build the wheel file and save it. You will upload this with your submission.
 
-`python ./awesome_mathutils/setup.py sdist`
+`python ./setup.py sdist`
 
 ---
 
@@ -115,9 +115,9 @@ Build the wheel file and save it. You will upload this with your submission.
 
 This section ensures you understand the importance of reproducable builds for supply chains.
 
-- Take a look through the `awesome_requests` package
+- Take a look through the `awesome_requests` package `cd awesome_requests`
 
-- Run `pip install ./awesome_requests`
+- Run `pip install .`
 
 This will build and install `awesome_requests`, but also install the `mattyt` package from PyPI
 
