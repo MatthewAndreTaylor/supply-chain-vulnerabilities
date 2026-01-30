@@ -85,9 +85,11 @@ Location: C:\Users\...\site-packages
 Matthew, the maintainer, has accidentally approved a pull request that secretly installs the package `mattyt` in two places.
 
 
-(a) Write out the function call that is executed to install the `mattyt` package for source distributions
+(a)
 
-(b) Write out the function call that is executed to install the `mattyt` package for binary distributions
+- Write out the function call that is executed to install the `mattyt` package for source distributions
+
+- Write out the function call that is executed to install the `mattyt` package for binary distributions
 
 hint: 🐶
 
