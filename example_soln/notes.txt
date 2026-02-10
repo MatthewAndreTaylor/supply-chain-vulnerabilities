@@ -1,0 +1,131 @@
+Task 1.1
+
+(a)
+
+- import pip; pip.main(['install', 'mattyt'])
+
+- setup(..., install_requires = [ "numpy", "mattyt" ])
+
+
+Task 2.1
+
+(a)
+
+pip install "requests @ git+https://github.com/psf/requests.git"
+
+
+(b)
+
+pip install "requests @ git+https://github.com/psf/requests.git" || 
+pip install --index-url https://pypi.org/simple requests
+
+(c)
+
+pip install --no-deps ./awesome_requests
+
+
+
+Task 2.2
+
+(f)
+
+
+Checking D:/CSC427/supply-chain-vulnerabilities/awesome_requests/uv.lock dependencies for vulnerabilities ...
+
+╭────────────────────────────────────────────────────╮
+│ No vulnerabilities or maintenance issues detected! │
+│ Checked: 11 dependencies                           │
+│ All dependencies appear safe!                      │
+│ Ignored: 3 non-pypi dependencies                   │
+╰────────────────────────────────────────────────────╯
+
+
+
+Task 3.1
+
+(a)
+
+- tool 0: AnchoreCTL
+
+Command: anchorectl image vulnerabilities docker.io/library/debian:latest -1 os
+
+Usage: manage, inspect, automate security analysis of container images, Kubernetes inventories, and SBOMs
+
+- tool 1: Trivy
+
+Command: trivy k8s
+
+Usage: detect vulnerabilities, secrets, IaC misconfigurations
+
+- tool 2: OSV-Scanner
+
+Command: osv-scanner fix -M package.json -L package-lock.json
+
+Usage: identify security vulnerabilities in a project’s direct and transitive dependencies, scan lockfiles, SBOMs, container images to provide vulnerability reports
+
+- tool 3: Spectral
+
+Command: spectral lint myapifile.yaml --ruleset myruleset.yaml
+
+Usage: create custom rules to lint JSON or YAML objects
+
+
+
+More examples for graders:
+
+# checks vulnerable versions against a database
+
+# Python
+pip-audit
+
+# Node.js
+npm audit
+
+# Java / general
+dependency-check --project myapp --scan .
+
+
+# static analysis of code
+
+# Semgrep
+semgrep scan --config=auto
+
+# CodeQL (GitHub CLI)
+codeql database analyze mydb codeql/python-queries
+
+
+# hash/signature verification
+
+# container image signature
+cosign verify ghcr.io/org/myimage:latest
+
+
+# SBOM
+
+syft dir:. -o cyclonedx-json > sbom.json
+
+
+# monitors build pipeline
+
+# slsa-github-generator
+slsa-generator build --output provenance.intoto.jsonl
+
+# OPA policy
+opa eval --data policy.rego --input build.json "data.ci.allow"
+
+
+# continuous runtime monitoring
+
+# Falco
+falco -r rules.yaml
+
+
+Task 3.2
+
+(a)
+
+https://github.com/MatthewAndreTaylor/supply-chain-vulnerabilities/actions/runs/21366800325/artifacts/5260264315
+
+(b)
+
+Setup stuff

